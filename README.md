@@ -2,10 +2,6 @@
 
 A practical starter codebase to build an **agentic RAG system** for event-camera / AI-imaging literature.
 
-This repo is set up to follow `AI agent项目步骤.md` with a "borrow-first, then extend" strategy:
-- Borrow architecture patterns from existing GitHub projects.
-- Keep original contributions in orchestration and retrieval-policy optimization.
-
 ## Upstream-first Strategy
 
 The project tracks upstream references in `references/upstream_repos.yaml` (use/reference only).
