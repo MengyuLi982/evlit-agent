@@ -1,0 +1,32 @@
+# Repositories whose code is actually imported into this project.
+# Only confirmed code copies should be listed under `repos`.
+#
+# Required keys for each repo entry:
+#   - url
+# Optional keys:
+#   - name
+#   - prefix
+#   - branch
+#   - imported_commit
+#   - imported_author
+#   - imported_author_date
+#   - local_paths
+#   - notes
+
+repos: []
+
+# No confirmed imported code blocks yet, so there are no upstream commit-date annotations.
+commit_annotations: []
+
+audit:
+  last_scanned_at_utc: 2026-03-04T14:50:06Z
+  method:
+    - "Exact meaningful-line overlap scan across src/**/*.py and .cache/upstream/*"
+    - "Longest contiguous normalized-line block matching"
+  result: "No high-confidence copied code blocks found in tracked local source files."
+  low_confidence_observations:
+    - repo: assafelovic/gpt-researcher
+      local_file: src/evagent/llm/client.py
+      upstream_file: .cache/upstream/gpt-researcher/gpt_researcher/utils/tools.py
+      overlap: "4-line argument block (`model/messages/temperature/max_tokens`)"
+      decision: "Not counted as imported code because the pattern is generic."

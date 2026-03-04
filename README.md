@@ -8,7 +8,8 @@ This repo is set up to follow `AI agent项目步骤.md` with a "borrow-first, th
 
 ## Upstream-first Strategy
 
-The project tracks upstream references in `references/upstream_repos.yaml`.
+The project tracks upstream references in `references/upstream_repos.yaml` (use/reference only).
+Actual code-import targets are tracked separately in `references/imported_repos.yaml`.
 Implementation mapping is documented in `references/borrowed_components.md`.
 
 Current primary references:
@@ -104,3 +105,40 @@ bash scripts/bootstrap_refs.sh
 ```
 
 Clones are placed in `.cache/upstream/`.
+
+## Import Upstream Repos With Original Commit Dates
+
+If you want imported code to keep upstream commit history and timestamps on GitHub, use subtree import (not copy/paste, squash, or cherry-pick).
+
+Single repository import:
+
+```bash
+bash scripts/import_upstream_history.sh add \
+  --repo-url https://github.com/future-house/paper-qa.git \
+  --prefix vendor/paper-qa
+```
+
+Update an existing imported subtree:
+
+```bash
+bash scripts/import_upstream_history.sh pull \
+  --repo-url https://github.com/future-house/paper-qa.git \
+  --prefix vendor/paper-qa
+```
+
+Batch import from `references/imported_repos.yaml`:
+
+```bash
+bash scripts/import_upstreams_from_yaml.sh --mode add
+```
+
+Dry-run batch mode:
+
+```bash
+bash scripts/import_upstreams_from_yaml.sh --mode add --dry-run
+```
+
+Notes:
+- Keep your working tree clean before running imports.
+- Upstream commits preserve original timestamps; each import/update adds one new local merge commit with current time.
+- Keep "use/reference only" repos in `references/upstream_repos.yaml`; only put real code-import repos in `references/imported_repos.yaml`.

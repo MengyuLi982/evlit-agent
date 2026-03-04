@@ -1,5 +1,6 @@
-# Primary upstream references for this codebase.
-# Each item tracks what we borrow and where we add original contributions.
+# Primary upstream repositories used as references/inspirations.
+# This file is not the import manifest. Do not put subtree import targets here.
+# Use references/imported_repos.yaml for repositories whose code is actually imported.
 repos:
   - name: future-house/paper-qa
     url: https://github.com/future-house/paper-qa

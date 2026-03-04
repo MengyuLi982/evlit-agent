@@ -1,0 +1,777 @@
+{
+  "summary": {
+    "source_run": "runs/ask_evnt_detection_tracking_2021plus_rebuild_latest.json",
+    "generated_at": "2026-03-04T15:31:33.813883+00:00",
+    "input_count_selected": 20,
+    "dedup_count": 20,
+    "content_level_stats": {
+      "fulltext_pdf": 2,
+      "abstract_fallback": 18
+    }
+  },
+  "taxonomy_axes": [
+    "Input Representation",
+    "Model Paradigm",
+    "Learning / Supervision"
+  ],
+  "task_buckets": {
+    "Dataset / Benchmark": [
+      "arxiv:2309.16987v1",
+      "openalex:W4309875759",
+      "openalex:W4413010666",
+      "openalex:W4413156100"
+    ],
+    "Domain-Specific Scenario": [
+      "arxiv:2309.16987v1",
+      "openalex:W3134027214",
+      "openalex:W3214545583",
+      "openalex:W4309875759",
+      "openalex:W4360606223"
+    ],
+    "Hardware-Aware / Efficient Deployment": [
+      "arxiv:2309.16987v1",
+      "openalex:W4309875759",
+      "openalex:W4316022139",
+      "openalex:W4360606223",
+      "openalex:W4366774363",
+      "openalex:W4400315083",
+      "openalex:W4413156100"
+    ],
+    "Joint Detection + Tracking": [
+      "arxiv:2309.16987v1",
+      "crossref:10.3390/biomimetics7010031",
+      "openalex:W3134027214",
+      "openalex:W3202534481",
+      "openalex:W3214545583",
+      "openalex:W4309875759",
+      "openalex:W4386075690"
+    ],
+    "Object Detection": [
+      "arxiv:2309.16987v1",
+      "crossref:10.3390/biomimetics7010031",
+      "openalex:W4309875759",
+      "openalex:W4316022139",
+      "openalex:W4385285879",
+      "openalex:W4386075690",
+      "openalex:W4396505821",
+      "openalex:W4400315083",
+      "openalex:W4402727829",
+      "openalex:W4402753639",
+      "openalex:W4413156100"
+    ],
+    "Object Tracking / Multi-Object Tracking": [
+      "arxiv:2309.16987v1",
+      "openalex:W3202534481",
+      "openalex:W3214545583",
+      "openalex:W4200312002",
+      "openalex:W4313482706",
+      "openalex:W4360606223",
+      "openalex:W4366774363",
+      "openalex:W4393172807",
+      "openalex:W4413010666"
+    ]
+  },
+  "taxonomy_tree": {
+    "Event Representation (Unspecified in available text)": {
+      "Transformer Family": {
+        "Supervision Not Explicitly Reported": [
+          {
+            "title": "Recurrent Vision Transformers for Object Detection with Event Cameras",
+            "year": 2023,
+            "paper_id": "openalex:W4386075690"
+          },
+          {
+            "title": "Scene Adaptive Sparse Transformer for Event-based Object Detection",
+            "year": 2024,
+            "paper_id": "openalex:W4402727829"
+          }
+        ]
+      },
+      "Spiking / Neuromorphic Network": {
+        "Self-/Unsupervised": [
+          {
+            "title": "Spike-Based Motion Estimation for Object Tracking Through Bio-Inspired Unsupervised Learning",
+            "year": 2022,
+            "paper_id": "openalex:W4313482706"
+          }
+        ],
+        "Supervision Not Explicitly Reported": [
+          {
+            "title": "Spike-Event Object Detection for Neuromorphic Vision",
+            "year": 2023,
+            "paper_id": "openalex:W4316022139"
+          }
+        ]
+      },
+      "Other / Unspecified": {
+        "Supervision Not Explicitly Reported": [
+          {
+            "title": "FAST-Dynamic-Vision: Detection and Tracking Dynamic Objects with Event and Depth Sensing",
+            "year": 2021,
+            "paper_id": "openalex:W3134027214"
+          }
+        ]
+      },
+      "Hardware-Algorithm Co-Design": {
+        "Supervised Learning": [
+          {
+            "title": "A Reconfigurable Architecture for Real-time Event-based Multi-Object Tracking",
+            "year": 2023,
+            "paper_id": "openalex:W4366774363"
+          }
+        ]
+      },
+      "CNN / Recurrent / Graph Hybrid": {
+        "Supervision Not Explicitly Reported": [
+          {
+            "title": "A Multi-target Tracking Algorithm for Fast-moving Workpieces Based on Event Camera",
+            "year": 2021,
+            "paper_id": "openalex:W3214545583"
+          }
+        ]
+      }
+    },
+    "Hybrid Fusion (Frame + Event)": {
+      "Other / Unspecified": {
+        "Supervision Not Explicitly Reported": [
+          {
+            "title": "Object Tracking by Jointly Exploiting Frame and Event Domain",
+            "year": 2021,
+            "paper_id": "openalex:W3202534481"
+          }
+        ]
+      },
+      "CNN / Recurrent / Graph Hybrid": {
+        "Supervision Not Explicitly Reported": [
+          {
+            "title": "A 73.53TOPS/W 14.74TOPS Heterogeneous RRAM In-Memory and SRAM Near-Memory SoC for Hybrid Frame and Event-Based Target Tracking",
+            "year": 2023,
+            "paper_id": "openalex:W4360606223"
+          }
+        ]
+      },
+      "Spiking / Neuromorphic Network": {
+        "Dataset / Benchmark-Driven Supervision": [
+          {
+            "title": "CRSOT: Cross-Resolution Object Tracking Using Unaligned Frame and Event Cameras",
+            "year": 2025,
+            "paper_id": "openalex:W4413010666"
+          }
+        ]
+      }
+    },
+    "Raw Event Stream": {
+      "Transformer Family": {
+        "Supervision Not Explicitly Reported": [
+          {
+            "title": "SODFormer: Streaming Object Detection With Transformer Using Events and Frames",
+            "year": 2023,
+            "paper_id": "openalex:W4385285879"
+          },
+          {
+            "title": "SpikingViT: A Multiscale Spiking Vision Transformer Model for Event-Based Object Detection",
+            "year": 2024,
+            "paper_id": "openalex:W4400315083"
+          },
+          {
+            "title": "Spatiotemporal Aggregation Transformer for Object Detection With Neuromorphic Vision Sensors",
+            "year": 2024,
+            "paper_id": "openalex:W4396505821"
+          }
+        ],
+        "Dataset / Benchmark-Driven Supervision": [
+          {
+            "title": "Object Detection using Event Camera: A MoE Heat Conduction based Detector and A New Benchmark Dataset",
+            "year": 2025,
+            "paper_id": "openalex:W4413156100"
+          }
+        ],
+        "Self-/Unsupervised": [
+          {
+            "title": "SpikeMOT: Event-based Multi-Object Tracking with Sparse Motion Features",
+            "year": 2024,
+            "paper_id": "arxiv:2309.16987v1"
+          }
+        ]
+      },
+      "Spiking / Neuromorphic Network": {
+        "Self-/Unsupervised": [
+          {
+            "title": "Pushing the Limits of Asynchronous Graph-based Object Detection with Event Cameras",
+            "year": 2022,
+            "paper_id": "openalex:W4309875759"
+          }
+        ]
+      },
+      "Other / Unspecified": {
+        "Label-Efficient / Semi-Supervised": [
+          {
+            "title": "LEOD: Label-Efficient Object Detection for Event Cameras",
+            "year": 2024,
+            "paper_id": "openalex:W4402753639"
+          }
+        ]
+      }
+    },
+    "Event Frame / Voxel / Time-Surface": {
+      "Spiking / Neuromorphic Network": {
+        "Supervision Not Explicitly Reported": [
+          {
+            "title": "Moving Object Detection and Tracking by Event Frame from Neuromorphic Vision Sensors",
+            "year": 2022,
+            "paper_id": "crossref:10.3390/biomimetics7010031"
+          }
+        ]
+      }
+    },
+    "Geometric / 3D Representation": {
+      "Spiking / Neuromorphic Network": {
+        "Supervision Not Explicitly Reported": [
+          {
+            "title": "3D Object Tracking with Neuromorphic Event Cameras via Image Reconstruction",
+            "year": 2021,
+            "paper_id": "openalex:W4200312002"
+          }
+        ]
+      },
+      "Classical Geometric / Model-Based": {
+        "Supervision Not Explicitly Reported": [
+          {
+            "title": "Direct 3D model-based object tracking with event camera by motion interpolation",
+            "year": 2024,
+            "paper_id": "openalex:W4393172807"
+          }
+        ]
+      }
+    }
+  },
+  "papers": [
+    {
+      "paper_id": "openalex:W4386075690",
+      "title": "Recurrent Vision Transformers for Object Detection with Event Cameras",
+      "year": 2023,
+      "doi": "10.1109/cvpr52729.2023.01334",
+      "url": "https://doi.org/10.1109/cvpr52729.2023.01334",
+      "pdf_url": null,
+      "sources": [
+        "openalex"
+      ],
+      "citation_count": 144,
+      "task_type": "detection",
+      "content_level": "abstract_fallback",
+      "content_chars_used": 420,
+      "selection_reason": "内容含数据集/benchmark证据；内容含方法范式与实现线索；内容含评估指标/实验结果语句；引用量高，经典性强；摘要级验证",
+      "task_buckets": [
+        "Object Detection",
+        "Joint Detection + Tracking"
+      ],
+      "taxonomy": {
+        "input_representation": "Event Representation (Unspecified in available text)",
+        "model_paradigm": "Transformer Family",
+        "learning_supervision": "Supervision Not Explicitly Reported"
+      },
+      "main_content": "We present Recurrent Vision Transformers (RVTs), a novel backbone for object detection with event cameras. Event cameras provide visual information with submillisecond latency at a high-dynamic range and with strong robustness against motion blur. These unique properties offer great potential for low-latency object detection and tracking in time-critical scenarios. Prior work in event-based vision has achieved outsta"
+    },
+    {
+      "paper_id": "openalex:W3202534481",
+      "title": "Object Tracking by Jointly Exploiting Frame and Event Domain",
+      "year": 2021,
+      "doi": "10.1109/iccv48922.2021.01280",
+      "url": "https://doi.org/10.1109/iccv48922.2021.01280",
+      "pdf_url": null,
+      "sources": [
+        "openalex"
+      ],
+      "citation_count": 109,
+      "task_type": "tracking",
+      "content_level": "abstract_fallback",
+      "content_chars_used": 420,
+      "selection_reason": "内容含方法范式与实现线索；内容含评估指标/实验结果语句；引用量高，经典性强；摘要级验证",
+      "task_buckets": [
+        "Object Tracking / Multi-Object Tracking",
+        "Joint Detection + Tracking"
+      ],
+      "taxonomy": {
+        "input_representation": "Hybrid Fusion (Frame + Event)",
+        "model_paradigm": "Other / Unspecified",
+        "learning_supervision": "Supervision Not Explicitly Reported"
+      },
+      "main_content": "Inspired by the complementarity between conventional frame-based and bio-inspired event-based cameras, we propose a multi-modal based approach to fuse visual cues from the frame- and event-domain to enhance the single object tracking performance, especially in degraded conditions (e.g., scenes with high dynamic range, low light, and fast-motion objects). The proposed approach can effectively and adaptively combine me"
+    },
+    {
+      "paper_id": "openalex:W4360606223",
+      "title": "A 73.53TOPS/W 14.74TOPS Heterogeneous RRAM In-Memory and SRAM Near-Memory SoC for Hybrid Frame and Event-Based Target Tracking",
+      "year": 2023,
+      "doi": "10.1109/isscc42615.2023.10067544",
+      "url": "https://doi.org/10.1109/isscc42615.2023.10067544",
+      "pdf_url": null,
+      "sources": [
+        "openalex"
+      ],
+      "citation_count": 45,
+      "task_type": "detection",
+      "content_level": "abstract_fallback",
+      "content_chars_used": 420,
+      "selection_reason": "内容含方法范式与实现线索；内容含评估指标/实验结果语句；引用量较高，常用度高；摘要级验证",
+      "task_buckets": [
+        "Object Tracking / Multi-Object Tracking",
+        "Domain-Specific Scenario",
+        "Hardware-Aware / Efficient Deployment"
+      ],
+      "taxonomy": {
+        "input_representation": "Hybrid Fusion (Frame + Event)",
+        "model_paradigm": "CNN / Recurrent / Graph Hybrid",
+        "learning_supervision": "Supervision Not Explicitly Reported"
+      },
+      "main_content": "Vision-based high-speed target-identification and tracking is a critical application in unmanned aerial vehicles (UAV) with wide military and commercial usage. Traditional frame cameras processed through convolutional neural networks (CNN) exhibit high target-identification accuracy but with low throughput (hence low tracking speed) and high power. On the other hand, event cameras or dynamic vision sensors (DVS) gene"
+    },
+    {
+      "paper_id": "openalex:W4313482706",
+      "title": "Spike-Based Motion Estimation for Object Tracking Through Bio-Inspired Unsupervised Learning",
+      "year": 2022,
+      "doi": "10.1109/tip.2022.3228168",
+      "url": "https://doi.org/10.1109/tip.2022.3228168",
+      "pdf_url": null,
+      "sources": [
+        "openalex"
+      ],
+      "citation_count": 41,
+      "task_type": "detection",
+      "content_level": "abstract_fallback",
+      "content_chars_used": 420,
+      "selection_reason": "内容含方法范式与实现线索；内容含评估指标/实验结果语句；引用量较高，常用度高；摘要级验证",
+      "task_buckets": [
+        "Object Tracking / Multi-Object Tracking"
+      ],
+      "taxonomy": {
+        "input_representation": "Event Representation (Unspecified in available text)",
+        "model_paradigm": "Spiking / Neuromorphic Network",
+        "learning_supervision": "Self-/Unsupervised"
+      },
+      "main_content": "Neuromorphic vision sensors, whose pixels output events/spikes asynchronously with a high temporal resolution according to the scene radiance change, are naturally appropriate for capturing high-speed motion in the scenes. However, how to utilize the events/spikes to smoothly track high-speed moving objects is still a challenging problem. Existing approaches either employ time-consuming iterative optimization, or req"
+    },
+    {
+      "paper_id": "openalex:W3134027214",
+      "title": "FAST-Dynamic-Vision: Detection and Tracking Dynamic Objects with Event and Depth Sensing",
+      "year": 2021,
+      "doi": "10.1109/iros51168.2021.9636448",
+      "url": "https://doi.org/10.1109/iros51168.2021.9636448",
+      "pdf_url": null,
+      "sources": [
+        "openalex"
+      ],
+      "citation_count": 37,
+      "task_type": "detection",
+      "content_level": "abstract_fallback",
+      "content_chars_used": 420,
+      "selection_reason": "内容含评估指标/实验结果语句；引用量较高，常用度高；摘要级验证",
+      "task_buckets": [
+        "Joint Detection + Tracking",
+        "Domain-Specific Scenario"
+      ],
+      "taxonomy": {
+        "input_representation": "Event Representation (Unspecified in available text)",
+        "model_paradigm": "Other / Unspecified",
+        "learning_supervision": "Supervision Not Explicitly Reported"
+      },
+      "main_content": "The development of aerial autonomy has enabled aerial robots to fly agilely in complex environments. However, dodging fast-moving objects in flight remains a challenge, limiting the further application of unmanned aerial vehicles (UAVs). The bottleneck of solving this problem is the accurate perception of rapid dynamic objects. Recently, event cameras have shown great potential in solving this problem. This paper pre"
+    },
+    {
+      "paper_id": "openalex:W4385285879",
+      "title": "SODFormer: Streaming Object Detection With Transformer Using Events and Frames",
+      "year": 2023,
+      "doi": "10.1109/tpami.2023.3298925",
+      "url": "https://doi.org/10.1109/tpami.2023.3298925",
+      "pdf_url": null,
+      "sources": [
+        "openalex"
+      ],
+      "citation_count": 36,
+      "task_type": "detection",
+      "content_level": "abstract_fallback",
+      "content_chars_used": 420,
+      "selection_reason": "内容含方法范式与实现线索；内容含评估指标/实验结果语句；引用量较高，常用度高；摘要级验证",
+      "task_buckets": [
+        "Object Detection"
+      ],
+      "taxonomy": {
+        "input_representation": "Raw Event Stream",
+        "model_paradigm": "Transformer Family",
+        "learning_supervision": "Supervision Not Explicitly Reported"
+      },
+      "main_content": "DAVIS camera, streaming two complementary sensing modalities of asynchronous events and frames, has gradually been used to address major object detection challenges (e.g., fast motion blur and low-light). However, how to effectively leverage rich temporal cues and fuse two heterogeneous visual streams remains a challenging endeavor. To address this challenge, we propose a novel streaming object detector with Transfor"
+    },
+    {
+      "paper_id": "crossref:10.3390/biomimetics7010031",
+      "title": "Moving Object Detection and Tracking by Event Frame from Neuromorphic Vision Sensors",
+      "year": 2022,
+      "doi": "10.3390/biomimetics7010031",
+      "url": "https://doi.org/10.3390/biomimetics7010031",
+      "pdf_url": null,
+      "sources": [
+        "crossref",
+        "openalex"
+      ],
+      "citation_count": 26,
+      "task_type": "both",
+      "content_level": "abstract_fallback",
+      "content_chars_used": 420,
+      "selection_reason": "内容含评估指标/实验结果语句；多源交叉命中；摘要级验证",
+      "task_buckets": [
+        "Object Detection",
+        "Joint Detection + Tracking"
+      ],
+      "taxonomy": {
+        "input_representation": "Event Frame / Voxel / Time-Surface",
+        "model_paradigm": "Spiking / Neuromorphic Network",
+        "learning_supervision": "Supervision Not Explicitly Reported"
+      },
+      "main_content": "<jats:p>Fast movement of objects and illumination changes may lead to a negative effect on camera images for object detection and tracking. Event cameras are neuromorphic vision sensors that capture the vitality of a scene, mitigating data redundancy and latency. This paper proposes a new solution to moving object detection and tracking using an event frame from bio-inspired event cameras. First, an object detection "
+    },
+    {
+      "paper_id": "openalex:W4402727829",
+      "title": "Scene Adaptive Sparse Transformer for Event-based Object Detection",
+      "year": 2024,
+      "doi": "10.1109/cvpr52733.2024.01589",
+      "url": "https://doi.org/10.1109/cvpr52733.2024.01589",
+      "pdf_url": null,
+      "sources": [
+        "openalex"
+      ],
+      "citation_count": 22,
+      "task_type": "detection",
+      "content_level": "abstract_fallback",
+      "content_chars_used": 420,
+      "selection_reason": "内容含方法范式与实现线索；内容含评估指标/实验结果语句；摘要级验证",
+      "task_buckets": [
+        "Object Detection"
+      ],
+      "taxonomy": {
+        "input_representation": "Event Representation (Unspecified in available text)",
+        "model_paradigm": "Transformer Family",
+        "learning_supervision": "Supervision Not Explicitly Reported"
+      },
+      "main_content": "While recent Transformer-based approaches have shown impressive performances on event-based object detection tasks, their high computational costs still diminish the low power consumption advantage of event cameras. Image-based works attempt to reduce these costs by introducing sparse Transformers. However, they display inade-quate sparsity and adaptability when applied to event-based object detection, since these ap"
+    },
+    {
+      "paper_id": "openalex:W4309875759",
+      "title": "Pushing the Limits of Asynchronous Graph-based Object Detection with Event Cameras",
+      "year": 2022,
+      "doi": "10.48550/arxiv.2211.12324",
+      "url": "http://arxiv.org/abs/2211.12324",
+      "pdf_url": "https://arxiv.org/pdf/2211.12324.pdf",
+      "sources": [
+        "openalex"
+      ],
+      "citation_count": 22,
+      "task_type": "detection",
+      "content_level": "fulltext_pdf",
+      "content_chars_used": 61106,
+      "selection_reason": "内容含评估指标/实验结果语句；摘要级验证",
+      "task_buckets": [
+        "Object Detection",
+        "Joint Detection + Tracking",
+        "Dataset / Benchmark",
+        "Domain-Specific Scenario",
+        "Hardware-Aware / Efficient Deployment"
+      ],
+      "taxonomy": {
+        "input_representation": "Raw Event Stream",
+        "model_paradigm": "Spiking / Neuromorphic Network",
+        "learning_supervision": "Self-/Unsupervised"
+      },
+      "main_content": "State-of-the-art machine-learning methods for event cameras treat events as dense representations and process them with conventional deep neural networks. Thus, they fail to maintain the sparsity and asynchronous nature of event data, thereby imposing significant computation and latency constraints on downstream systems. A recent line of work tackles this issue by modeling events as spatiotemporally evolving graphs t"
+    },
+    {
+      "paper_id": "openalex:W4400315083",
+      "title": "SpikingViT: A Multiscale Spiking Vision Transformer Model for Event-Based Object Detection",
+      "year": 2024,
+      "doi": "10.1109/tcds.2024.3422873",
+      "url": "https://doi.org/10.1109/tcds.2024.3422873",
+      "pdf_url": null,
+      "sources": [
+        "openalex"
+      ],
+      "citation_count": 17,
+      "task_type": "detection",
+      "content_level": "abstract_fallback",
+      "content_chars_used": 420,
+      "selection_reason": "内容含方法范式与实现线索；内容含评估指标/实验结果语句；摘要级验证",
+      "task_buckets": [
+        "Object Detection",
+        "Hardware-Aware / Efficient Deployment"
+      ],
+      "taxonomy": {
+        "input_representation": "Raw Event Stream",
+        "model_paradigm": "Transformer Family",
+        "learning_supervision": "Supervision Not Explicitly Reported"
+      },
+      "main_content": "Event cameras have unique advantages in object detection, capturing asynchronous events without continuous frames. They excel in dynamic range, low latency, and high-speed motion scenarios, with lower power consumption. However, aggregating event data into image frames leads to information loss and reduced detection performance. Applying traditional neural networks to event camera outputs is challenging due to event "
+    },
+    {
+      "paper_id": "openalex:W4316022139",
+      "title": "Spike-Event Object Detection for Neuromorphic Vision",
+      "year": 2023,
+      "doi": "10.1109/access.2023.3236800",
+      "url": "https://doi.org/10.1109/access.2023.3236800",
+      "pdf_url": null,
+      "sources": [
+        "crossref",
+        "openalex"
+      ],
+      "citation_count": 12,
+      "task_type": "both",
+      "content_level": "abstract_fallback",
+      "content_chars_used": 420,
+      "selection_reason": "内容含方法范式与实现线索；内容含评估指标/实验结果语句；多源交叉命中；摘要级验证",
+      "task_buckets": [
+        "Object Detection",
+        "Hardware-Aware / Efficient Deployment"
+      ],
+      "taxonomy": {
+        "input_representation": "Event Representation (Unspecified in available text)",
+        "model_paradigm": "Spiking / Neuromorphic Network",
+        "learning_supervision": "Supervision Not Explicitly Reported"
+      },
+      "main_content": "Neuromorphic vision is one of the novel research fields that study neuromorphic cameras and spiking neural networks (SNNs) for computer vision. Instead of computing on frame-based images, spike events are streamed from neuromorphic cameras, and novel object detection algorithms have to deal with spike events to achieve detection tasks. In this paper, we propose a solution to the novel object detection method with spi"
+    },
+    {
+      "paper_id": "openalex:W4366774363",
+      "title": "A Reconfigurable Architecture for Real-time Event-based Multi-Object Tracking",
+      "year": 2023,
+      "doi": "10.1145/3593587",
+      "url": "https://doi.org/10.1145/3593587",
+      "pdf_url": null,
+      "sources": [
+        "openalex"
+      ],
+      "citation_count": 10,
+      "task_type": "tracking",
+      "content_level": "abstract_fallback",
+      "content_chars_used": 420,
+      "selection_reason": "内容含方法范式与实现线索；内容含评估指标/实验结果语句；摘要级验证",
+      "task_buckets": [
+        "Object Tracking / Multi-Object Tracking",
+        "Hardware-Aware / Efficient Deployment"
+      ],
+      "taxonomy": {
+        "input_representation": "Event Representation (Unspecified in available text)",
+        "model_paradigm": "Hardware-Algorithm Co-Design",
+        "learning_supervision": "Supervised Learning"
+      },
+      "main_content": "Although advances in event-based machine vision algorithms have demonstrated unparalleled capabilities in performing some of the most demanding tasks, their implementations under stringent real-time and power constraints in edge systems remain a major challenge. In this work, a reconfigurable hardware-software architecture called REMOT, which performs real-time event-based multi-object tracking on FPGAs, is presented"
+    },
+    {
+      "paper_id": "openalex:W4402753639",
+      "title": "LEOD: Label-Efficient Object Detection for Event Cameras",
+      "year": 2024,
+      "doi": "10.1109/cvpr52733.2024.01602",
+      "url": "https://doi.org/10.1109/cvpr52733.2024.01602",
+      "pdf_url": null,
+      "sources": [
+        "openalex"
+      ],
+      "citation_count": 9,
+      "task_type": "detection",
+      "content_level": "abstract_fallback",
+      "content_chars_used": 420,
+      "selection_reason": "内容含数据集/benchmark证据；内容含评估指标/实验结果语句；摘要级验证",
+      "task_buckets": [
+        "Object Detection"
+      ],
+      "taxonomy": {
+        "input_representation": "Raw Event Stream",
+        "model_paradigm": "Other / Unspecified",
+        "learning_supervision": "Label-Efficient / Semi-Supervised"
+      },
+      "main_content": "Object detection with event cameras benefits from the sensor's low latency and high dynamic range. However, it is costly to fully label event streams for supervised training due to their high temporal resolution. To reduce this cost, we present LEOD, the first method for label-efficient event-based detection. Our approach unifies weakly- and semi-supervised object detection with a self-training mech-anism. We first u"
+    },
+    {
+      "paper_id": "openalex:W4396505821",
+      "title": "Spatiotemporal Aggregation Transformer for Object Detection With Neuromorphic Vision Sensors",
+      "year": 2024,
+      "doi": "10.1109/jsen.2024.3392973",
+      "url": "https://doi.org/10.1109/jsen.2024.3392973",
+      "pdf_url": null,
+      "sources": [
+        "openalex"
+      ],
+      "citation_count": 7,
+      "task_type": "detection",
+      "content_level": "abstract_fallback",
+      "content_chars_used": 420,
+      "selection_reason": "内容含数据集/benchmark证据；内容含方法范式与实现线索；内容含评估指标/实验结果语句；摘要级验证",
+      "task_buckets": [
+        "Object Detection"
+      ],
+      "taxonomy": {
+        "input_representation": "Raw Event Stream",
+        "model_paradigm": "Transformer Family",
+        "learning_supervision": "Supervision Not Explicitly Reported"
+      },
+      "main_content": "To enhance the accuracy of object detection with event-based neuromorphic vision sensors, a novel event-based detector named Spatio-Temporal Aggregation Transformer (STAT) is proposed. Firstly, in order to collect sufficient event information to estimate the problem considered, STAT uses a density-based adaptive sampling (DAS) module to sample continuous event stream into multiple groups adaptively. This module can d"
+    },
+    {
+      "paper_id": "openalex:W4200312002",
+      "title": "3D Object Tracking with Neuromorphic Event Cameras via Image Reconstruction",
+      "year": 2021,
+      "doi": "10.1109/biocas49922.2021.9644652",
+      "url": "https://doi.org/10.1109/biocas49922.2021.9644652",
+      "pdf_url": null,
+      "sources": [
+        "openalex"
+      ],
+      "citation_count": 7,
+      "task_type": "tracking",
+      "content_level": "abstract_fallback",
+      "content_chars_used": 420,
+      "selection_reason": "内容含评估指标/实验结果语句；摘要级验证",
+      "task_buckets": [
+        "Object Tracking / Multi-Object Tracking"
+      ],
+      "taxonomy": {
+        "input_representation": "Geometric / 3D Representation",
+        "model_paradigm": "Spiking / Neuromorphic Network",
+        "learning_supervision": "Supervision Not Explicitly Reported"
+      },
+      "main_content": "One of the first and most remarkable successes in neuromorphic (brain-inspired) engineering was the development of bio-inspired event cameras, which communicate transients in luminance as events. Here we evaluate the combination of the Channel and Spatial Reliability Tracking (CSRT) algorithm and the LapDepth neural network for the implementation of 3D object tracking with event cameras. We show that following image "
+    },
+    {
+      "paper_id": "openalex:W4413010666",
+      "title": "CRSOT: Cross-Resolution Object Tracking Using Unaligned Frame and Event Cameras",
+      "year": 2025,
+      "doi": "10.1109/tmm.2025.3586135",
+      "url": "https://doi.org/10.1109/tmm.2025.3586135",
+      "pdf_url": null,
+      "sources": [
+        "openalex"
+      ],
+      "citation_count": 6,
+      "task_type": "tracking",
+      "content_level": "abstract_fallback",
+      "content_chars_used": 420,
+      "selection_reason": "内容含评估指标/实验结果语句；摘要级验证",
+      "task_buckets": [
+        "Object Tracking / Multi-Object Tracking",
+        "Dataset / Benchmark"
+      ],
+      "taxonomy": {
+        "input_representation": "Hybrid Fusion (Frame + Event)",
+        "model_paradigm": "Spiking / Neuromorphic Network",
+        "learning_supervision": "Dataset / Benchmark-Driven Supervision"
+      },
+      "main_content": "Existing datasets for RGB-DVS tracking are collected with DVS346 camera and their resolution (<inline-formula xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:xlink=\"http://www.w3.org/1999/xlink\"><tex-math notation=\"LaTeX\">$346 \\times 260$</tex-math></inline-formula>) is low for practical applications. Actually, only visible cameras are deployed in many practical systems, and the newly designed neuromorphic camer"
+    },
+    {
+      "paper_id": "openalex:W4393172807",
+      "title": "Direct 3D model-based object tracking with event camera by motion interpolation",
+      "year": 2024,
+      "doi": "10.1109/icra57147.2024.10611576",
+      "url": "https://doi.org/10.1109/icra57147.2024.10611576",
+      "pdf_url": null,
+      "sources": [
+        "crossref",
+        "openalex"
+      ],
+      "citation_count": 6,
+      "task_type": "tracking",
+      "content_level": "abstract_fallback",
+      "content_chars_used": 420,
+      "selection_reason": "内容含评估指标/实验结果语句；多源交叉命中；摘要级验证",
+      "task_buckets": [
+        "Object Tracking / Multi-Object Tracking"
+      ],
+      "taxonomy": {
+        "input_representation": "Geometric / 3D Representation",
+        "model_paradigm": "Classical Geometric / Model-Based",
+        "learning_supervision": "Supervision Not Explicitly Reported"
+      },
+      "main_content": "Event cameras are recent sensors that measure intensity changes in each pixel asynchronously. It is being used due to lower latency and higher temporal resolution compared to traditional frame-based camera. We propose a method of 3D model-based object tracking directly from events captured by event camera. To enable reliable and accurate tracking of objects, we use a new event representation and predict brightness in"
+    },
+    {
+      "paper_id": "openalex:W4413156100",
+      "title": "Object Detection using Event Camera: A MoE Heat Conduction based Detector and A New Benchmark Dataset",
+      "year": 2025,
+      "doi": "10.1109/cvpr52734.2025.02730",
+      "url": "https://doi.org/10.1109/cvpr52734.2025.02730",
+      "pdf_url": null,
+      "sources": [
+        "openalex"
+      ],
+      "citation_count": 4,
+      "task_type": "detection",
+      "content_level": "abstract_fallback",
+      "content_chars_used": 420,
+      "selection_reason": "内容含数据集/benchmark证据；内容含方法范式与实现线索；内容含评估指标/实验结果语句；摘要级验证",
+      "task_buckets": [
+        "Object Detection",
+        "Dataset / Benchmark",
+        "Hardware-Aware / Efficient Deployment"
+      ],
+      "taxonomy": {
+        "input_representation": "Raw Event Stream",
+        "model_paradigm": "Transformer Family",
+        "learning_supervision": "Dataset / Benchmark-Driven Supervision"
+      },
+      "main_content": "Object detection in event streams has emerged as a cutting-edge research area, demonstrating superior performance in low-light conditions, scenarios with motion blur, and rapid movements. Current detectors leverage spiking neural networks, Transformers, or convolutional neural networks as their core architectures, each with its own set of limitations including restricted performance, high computational overhead, or l"
+    },
+    {
+      "paper_id": "arxiv:2309.16987v1",
+      "title": "SpikeMOT: Event-based Multi-Object Tracking with Sparse Motion Features",
+      "year": 2024,
+      "doi": "10.1109/access.2024.3523411",
+      "url": "http://arxiv.org/abs/2309.16987v1",
+      "pdf_url": "https://arxiv.org/pdf/2309.16987.pdf",
+      "sources": [
+        "arxiv",
+        "openalex"
+      ],
+      "citation_count": 4,
+      "task_type": "both",
+      "content_level": "fulltext_pdf",
+      "content_chars_used": 79407,
+      "selection_reason": "内容含数据集/benchmark证据；内容含方法范式与实现线索；内容含评估指标/实验结果语句；多源交叉命中；摘要级验证",
+      "task_buckets": [
+        "Object Detection",
+        "Object Tracking / Multi-Object Tracking",
+        "Joint Detection + Tracking",
+        "Dataset / Benchmark",
+        "Domain-Specific Scenario",
+        "Hardware-Aware / Efficient Deployment"
+      ],
+      "taxonomy": {
+        "input_representation": "Raw Event Stream",
+        "model_paradigm": "Transformer Family",
+        "learning_supervision": "Self-/Unsupervised"
+      },
+      "main_content": "In comparison to conventional RGB cameras, the superior temporal resolution of event cameras allows them to capture rich information between frames, making them prime candidates for object tracking. Yet in practice, despite their theoretical advantages, the body of work on event-based multi-object tracking (MOT) remains in its infancy, especially in real-world settings where events from complex background and camera "
+    },
+    {
+      "paper_id": "openalex:W3214545583",
+      "title": "A Multi-target Tracking Algorithm for Fast-moving Workpieces Based on Event Camera",
+      "year": 2021,
+      "doi": "10.1109/iecon48115.2021.9589502",
+      "url": "https://doi.org/10.1109/iecon48115.2021.9589502",
+      "pdf_url": null,
+      "sources": [
+        "openalex"
+      ],
+      "citation_count": 3,
+      "task_type": "both",
+      "content_level": "abstract_fallback",
+      "content_chars_used": 420,
+      "selection_reason": "内容含方法范式与实现线索；内容含评估指标/实验结果语句；摘要级验证",
+      "task_buckets": [
+        "Object Tracking / Multi-Object Tracking",
+        "Joint Detection + Tracking",
+        "Domain-Specific Scenario"
+      ],
+      "taxonomy": {
+        "input_representation": "Event Representation (Unspecified in available text)",
+        "model_paradigm": "CNN / Recurrent / Graph Hybrid",
+        "learning_supervision": "Supervision Not Explicitly Reported"
+      },
+      "main_content": "Multi-target tracking application for fast-moving workpieces has drawn increasing attention in the industrial field. For the dense, fast moving workpieces with few texture features, traditional cameras get poor quality images with dynamic blur and object adhesion, which makes the detection and tracking of workpieces unreliable. However, the event camera outputs events asynchronously at a microsecond speed when the pi"
+    }
+  ]
+}
