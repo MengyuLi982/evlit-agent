@@ -1,0 +1,694 @@
+{
+  "summary": {
+    "source_run": "runs/ask_evnt_detection_strict.jsonl",
+    "generated_at": "2026-03-04T11:13:34.485773+00:00",
+    "input_count_strict_selected": 20,
+    "dedup_count": 17,
+    "content_level_stats": {
+      "fulltext_pdf": 10,
+      "abstract_fallback": 7
+    }
+  },
+  "taxonomy_axes": [
+    "Input Representation",
+    "Model Paradigm",
+    "Learning / Supervision"
+  ],
+  "task_buckets": {
+    "Dataset / Benchmark": [
+      "arxiv:2309.16987v1",
+      "arxiv:2401.02826v1",
+      "arxiv:2403.18330v3",
+      "arxiv:2406.20024v3",
+      "arxiv:2407.20446v1",
+      "arxiv:2505.11282v2",
+      "arxiv:2505.12903v1",
+      "arxiv:2506.09098v1",
+      "arxiv:2506.23575v1",
+      "openalex:W4413156100",
+      "s2:2506.13722"
+    ],
+    "Domain-Specific Scenario": [
+      "arxiv:2309.16987v1",
+      "arxiv:2401.02826v1",
+      "arxiv:2403.18330v3",
+      "arxiv:2407.20446v1",
+      "arxiv:2505.11282v2",
+      "arxiv:2506.09098v1",
+      "arxiv:2506.23575v1",
+      "openalex:W4360606223",
+      "openalex:W4406208171",
+      "s2:2506.13722"
+    ],
+    "Hardware-Aware / Efficient Deployment": [
+      "arxiv:2309.16987v1",
+      "arxiv:2401.02826v1",
+      "arxiv:2403.18330v3",
+      "arxiv:2407.20446v1",
+      "arxiv:2505.11282v2",
+      "arxiv:2505.12903v1",
+      "arxiv:2506.09098v1",
+      "arxiv:2506.23575v1",
+      "openalex:W4360606223",
+      "s2:0a9e8cd39cec47c25054f09e5d642951a8123c83"
+    ],
+    "Joint Detection + Tracking": [
+      "arxiv:2309.16987v1",
+      "arxiv:2401.02826v1",
+      "arxiv:2403.18330v3",
+      "arxiv:2407.20446v1",
+      "arxiv:2505.11282v2",
+      "s2:2506.13722"
+    ],
+    "Object Detection": [
+      "arxiv:2309.16987v1",
+      "arxiv:2401.02826v1",
+      "arxiv:2403.18330v3",
+      "arxiv:2406.20024v3",
+      "arxiv:2407.20446v1",
+      "arxiv:2505.11282v2",
+      "arxiv:2506.09098v1",
+      "arxiv:2506.23575v1",
+      "openalex:W4386075690",
+      "openalex:W4402753639",
+      "openalex:W4406208171",
+      "openalex:W4413156100",
+      "s2:2506.13722"
+    ],
+    "Object Tracking / Multi-Object Tracking": [
+      "arxiv:2309.16987v1",
+      "arxiv:2401.02826v1",
+      "arxiv:2403.18330v3",
+      "arxiv:2406.20024v3",
+      "arxiv:2407.20446v1",
+      "arxiv:2505.11282v2",
+      "arxiv:2505.12903v1",
+      "arxiv:2506.09098v1",
+      "arxiv:2506.23575v1",
+      "openalex:W4386075690",
+      "openalex:W4393172807",
+      "openalex:W4406208171",
+      "openalex:W4413156100",
+      "s2:0a9e8cd39cec47c25054f09e5d642951a8123c83",
+      "s2:2506.13722"
+    ]
+  },
+  "taxonomy_tree": {
+    "Raw Event Stream": {
+      "Transformer Family": {
+        "Dataset / Benchmark-Driven Supervision": [
+          {
+            "title": "WD-DETR: Wavelet Denoising-Enhanced Real-Time Object Detection Transformer for Robot Perception with Event Cameras",
+            "year": 2025,
+            "paper_id": "arxiv:2506.09098v1"
+          },
+          {
+            "title": "How Real is CARLAs Dynamic Vision Sensor? A Study on the Sim-to-Real Gap in Traffic Object Detection",
+            "year": 2025,
+            "paper_id": "s2:2506.13722"
+          },
+          {
+            "title": "MEVDT: Multi-Modal Event-Based Vehicle Detection and Tracking Dataset",
+            "year": 2024,
+            "paper_id": "arxiv:2407.20446v1"
+          },
+          {
+            "title": "SpikeMOT: Event-based Multi-Object Tracking with Sparse Motion Features",
+            "year": 2023,
+            "paper_id": "arxiv:2309.16987v1"
+          }
+        ],
+        "Label-Efficient / Semi-Supervised": [
+          {
+            "title": "Towards Low-Latency Event Stream-based Visual Object Tracking: A Slow-Fast Approach",
+            "year": 2025,
+            "paper_id": "arxiv:2505.12903v1"
+          }
+        ]
+      },
+      "Transformer Family (incl. MoE variants)": {
+        "Dataset / Benchmark-Driven Supervision": [
+          {
+            "title": "Object Detection using Event Camera: A MoE Heat Conduction based Detector and A New Benchmark Dataset",
+            "year": 2025,
+            "paper_id": "openalex:W4413156100"
+          },
+          {
+            "title": "Event-based Tiny Object Detection: A Benchmark Dataset and Baseline",
+            "year": 2025,
+            "paper_id": "arxiv:2506.23575v1"
+          },
+          {
+            "title": "CRSOT: Cross-Resolution Object Tracking using Unaligned Frame and Event Cameras",
+            "year": 2024,
+            "paper_id": "arxiv:2401.02826v1"
+          }
+        ],
+        "Label-Efficient / Semi-Supervised": [
+          {
+            "title": "eMoE-Tracker: Environmental MoE-based Transformer for Robust Event-guided Object Tracking",
+            "year": 2024,
+            "paper_id": "arxiv:2406.20024v3"
+          }
+        ]
+      },
+      "Other / Unspecified": {
+        "Label-Efficient / Semi-Supervised": [
+          {
+            "title": "LEOD: Label-Efficient Object Detection for Event Cameras",
+            "year": 2024,
+            "paper_id": "openalex:W4402753639"
+          }
+        ]
+      }
+    },
+    "Geometric / 3D Representation": {
+      "Transformer Family": {
+        "Dataset / Benchmark-Driven Supervision": [
+          {
+            "title": "MTevent: A Multi-Task Event Camera Dataset for 6D Pose Estimation and Moving Object Detection",
+            "year": 2025,
+            "paper_id": "arxiv:2505.11282v2"
+          }
+        ]
+      },
+      "Classical Geometric / Model-Based": {
+        "Supervision Not Explicitly Reported": [
+          {
+            "title": "Direct 3D model-based object tracking with event camera by motion interpolation",
+            "year": 2024,
+            "paper_id": "openalex:W4393172807"
+          }
+        ]
+      }
+    },
+    "Event Representation (Unspecified in available text)": {
+      "Spiking / Neuromorphic Network": {
+        "Supervision Not Explicitly Reported": [
+          {
+            "title": "Event-Driven Dynamic Attention for Multi-Object Tracking on Neuromorphic Hardware",
+            "year": 2025,
+            "paper_id": "s2:0a9e8cd39cec47c25054f09e5d642951a8123c83"
+          }
+        ]
+      },
+      "Transformer Family": {
+        "Supervision Not Explicitly Reported": [
+          {
+            "title": "ESVT: Event-Based Streaming Vision Transformer for Challenging Object Detection",
+            "year": 2025,
+            "paper_id": "openalex:W4406208171"
+          },
+          {
+            "title": "Recurrent Vision Transformers for Object Detection with Event Cameras",
+            "year": 2023,
+            "paper_id": "openalex:W4386075690"
+          }
+        ]
+      }
+    },
+    "Event Frame / Voxel / Time-Surface": {
+      "Transformer Family": {
+        "Dataset / Benchmark-Driven Supervision": [
+          {
+            "title": "Tracking-Assisted Object Detection with Event Cameras",
+            "year": 2024,
+            "paper_id": "arxiv:2403.18330v3"
+          }
+        ]
+      }
+    },
+    "Hybrid Fusion (Frame + Event)": {
+      "CNN / Hybrid Deep Network": {
+        "Supervision Not Explicitly Reported": [
+          {
+            "title": "A 73.53TOPS/W 14.74TOPS Heterogeneous RRAM In-Memory and SRAM Near-Memory SoC for Hybrid Frame and Event-Based Target Tracking",
+            "year": 2023,
+            "paper_id": "openalex:W4360606223"
+          }
+        ]
+      }
+    }
+  },
+  "papers": [
+    {
+      "paper_id": "arxiv:2506.09098v1",
+      "title": "WD-DETR: Wavelet Denoising-Enhanced Real-Time Object Detection Transformer for Robot Perception with Event Cameras",
+      "year": 2025,
+      "source": "arxiv",
+      "doi": null,
+      "url": "http://arxiv.org/abs/2506.09098v1",
+      "pdf_url": "https://arxiv.org/pdf/2506.09098.pdf",
+      "content_level": "fulltext_pdf",
+      "content_chars_used": 50104,
+      "task_buckets": [
+        "Object Tracking / Multi-Object Tracking",
+        "Object Detection",
+        "Dataset / Benchmark",
+        "Domain-Specific Scenario",
+        "Hardware-Aware / Efficient Deployment"
+      ],
+      "taxonomy": {
+        "input_representation": "Raw Event Stream",
+        "model_paradigm": "Transformer Family",
+        "learning_supervision": "Dataset / Benchmark-Driven Supervision"
+      },
+      "merged_from_count": 1,
+      "merged_paper_ids": [
+        "arxiv:2506.09098v1"
+      ],
+      "main_content": "Previous studies on event camera sensing have demonstrated certain detection performance using dense event representations. However, the accumulated noise in such dense representations has received insufficient attention, which degrades the representation q..."
+    },
+    {
+      "paper_id": "arxiv:2505.12903v1",
+      "title": "Towards Low-Latency Event Stream-based Visual Object Tracking: A Slow-Fast Approach",
+      "year": 2025,
+      "source": "arxiv",
+      "doi": null,
+      "url": "http://arxiv.org/abs/2505.12903v1",
+      "pdf_url": "https://arxiv.org/pdf/2505.12903.pdf",
+      "content_level": "fulltext_pdf",
+      "content_chars_used": 56494,
+      "task_buckets": [
+        "Object Tracking / Multi-Object Tracking",
+        "Dataset / Benchmark",
+        "Hardware-Aware / Efficient Deployment"
+      ],
+      "taxonomy": {
+        "input_representation": "Raw Event Stream",
+        "model_paradigm": "Transformer Family",
+        "learning_supervision": "Label-Efficient / Semi-Supervised"
+      },
+      "merged_from_count": 1,
+      "merged_paper_ids": [
+        "arxiv:2505.12903v1"
+      ],
+      "main_content": "Existing tracking algorithms typically rely on low-frame-rate RGB cameras coupled with computationally intensive deep neural network architectures to achieve effective tracking. However, such frame-based methods inherently face challenges in achieving low-l..."
+    },
+    {
+      "paper_id": "openalex:W4413156100",
+      "title": "Object Detection using Event Camera: A MoE Heat Conduction based Detector and A New Benchmark Dataset",
+      "year": 2025,
+      "source": "openalex",
+      "doi": "10.1109/cvpr52734.2025.02730",
+      "url": "https://doi.org/10.1109/cvpr52734.2025.02730",
+      "pdf_url": null,
+      "content_level": "abstract_fallback",
+      "content_chars_used": 362,
+      "task_buckets": [
+        "Object Tracking / Multi-Object Tracking",
+        "Object Detection",
+        "Dataset / Benchmark"
+      ],
+      "taxonomy": {
+        "input_representation": "Raw Event Stream",
+        "model_paradigm": "Transformer Family (incl. MoE variants)",
+        "learning_supervision": "Dataset / Benchmark-Driven Supervision"
+      },
+      "merged_from_count": 1,
+      "merged_paper_ids": [
+        "openalex:W4413156100"
+      ],
+      "main_content": "Object detection in event streams has emerged as a cutting-edge research area, demonstrating superior performance in low-light conditions, scenarios with motion blur, and rapid movements. Current detectors leverage spiking neural networks, Transformers, or ..."
+    },
+    {
+      "paper_id": "arxiv:2505.11282v2",
+      "title": "MTevent: A Multi-Task Event Camera Dataset for 6D Pose Estimation and Moving Object Detection",
+      "year": 2025,
+      "source": "arxiv",
+      "doi": null,
+      "url": "http://arxiv.org/abs/2505.11282v2",
+      "pdf_url": "https://arxiv.org/pdf/2505.11282.pdf",
+      "content_level": "fulltext_pdf",
+      "content_chars_used": 35059,
+      "task_buckets": [
+        "Object Tracking / Multi-Object Tracking",
+        "Object Detection",
+        "Joint Detection + Tracking",
+        "Dataset / Benchmark",
+        "Domain-Specific Scenario",
+        "Hardware-Aware / Efficient Deployment"
+      ],
+      "taxonomy": {
+        "input_representation": "Geometric / 3D Representation",
+        "model_paradigm": "Transformer Family",
+        "learning_supervision": "Dataset / Benchmark-Driven Supervision"
+      },
+      "merged_from_count": 2,
+      "merged_paper_ids": [
+        "arxiv:2505.11282v2",
+        "s2:2505.11282"
+      ],
+      "main_content": "Mobile robots are reaching unprecedented speeds, with platforms like Unitree B2, and Fraunhofer O3dyn achieving maximum speeds between 5 and 10 m/s. However, effectively utilizing such speeds remains a challenge due to the limitations of RGB cameras, which ..."
+    },
+    {
+      "paper_id": "s2:2506.13722",
+      "title": "How Real is CARLAs Dynamic Vision Sensor? A Study on the Sim-to-Real Gap in Traffic Object Detection",
+      "year": 2025,
+      "source": "semanticscholar",
+      "doi": "10.48550/arXiv.2506.13722",
+      "url": "https://www.semanticscholar.org/paper/699bbdcab55de8d773b21f4a95a6add0ea0f65c2",
+      "pdf_url": "https://arxiv.org/pdf/2506.13722.pdf",
+      "content_level": "fulltext_pdf",
+      "content_chars_used": 36026,
+      "task_buckets": [
+        "Object Tracking / Multi-Object Tracking",
+        "Object Detection",
+        "Joint Detection + Tracking",
+        "Dataset / Benchmark",
+        "Domain-Specific Scenario"
+      ],
+      "taxonomy": {
+        "input_representation": "Raw Event Stream",
+        "model_paradigm": "Transformer Family",
+        "learning_supervision": "Dataset / Benchmark-Driven Supervision"
+      },
+      "merged_from_count": 1,
+      "merged_paper_ids": [
+        "s2:2506.13722"
+      ],
+      "main_content": "Event cameras are gaining traction in traffic monitoring applications due to their low latency, high temporal resolution, and energy efficiency, which makes them well-suited for real-time object detection at traffic intersections. However, the development o..."
+    },
+    {
+      "paper_id": "arxiv:2506.23575v1",
+      "title": "Event-based Tiny Object Detection: A Benchmark Dataset and Baseline",
+      "year": 2025,
+      "source": "arxiv",
+      "doi": null,
+      "url": "http://arxiv.org/abs/2506.23575v1",
+      "pdf_url": "https://arxiv.org/pdf/2506.23575.pdf",
+      "content_level": "fulltext_pdf",
+      "content_chars_used": 44826,
+      "task_buckets": [
+        "Object Tracking / Multi-Object Tracking",
+        "Object Detection",
+        "Dataset / Benchmark",
+        "Domain-Specific Scenario",
+        "Hardware-Aware / Efficient Deployment"
+      ],
+      "taxonomy": {
+        "input_representation": "Raw Event Stream",
+        "model_paradigm": "Transformer Family (incl. MoE variants)",
+        "learning_supervision": "Dataset / Benchmark-Driven Supervision"
+      },
+      "merged_from_count": 1,
+      "merged_paper_ids": [
+        "arxiv:2506.23575v1"
+      ],
+      "main_content": "Small object detection (SOD) in anti-UAV task is a challenging problem due to the small size of UAVs and complex backgrounds. Traditional frame-based cameras struggle to detect small objects in complex environments due to their low frame rates, limited dyna..."
+    },
+    {
+      "paper_id": "s2:0a9e8cd39cec47c25054f09e5d642951a8123c83",
+      "title": "Event-Driven Dynamic Attention for Multi-Object Tracking on Neuromorphic Hardware",
+      "year": 2025,
+      "source": "semanticscholar",
+      "doi": "10.1109/CVPRW67362.2025.00500",
+      "url": "https://www.semanticscholar.org/paper/0a9e8cd39cec47c25054f09e5d642951a8123c83",
+      "pdf_url": null,
+      "content_level": "abstract_fallback",
+      "content_chars_used": 342,
+      "task_buckets": [
+        "Object Tracking / Multi-Object Tracking",
+        "Hardware-Aware / Efficient Deployment"
+      ],
+      "taxonomy": {
+        "input_representation": "Event Representation (Unspecified in available text)",
+        "model_paradigm": "Spiking / Neuromorphic Network",
+        "learning_supervision": "Supervision Not Explicitly Reported"
+      },
+      "merged_from_count": 1,
+      "merged_paper_ids": [
+        "s2:0a9e8cd39cec47c25054f09e5d642951a8123c83"
+      ],
+      "main_content": "We present a real-time, event-driven multi-object tracking system leveraging the SpiNNaker neuromorphic platform and Dynamic Vision Sensor (DVS). Inspired by hippocampal grid neurons, our approach employs a dynamic attention mechanism based on recurrent spi..."
+    },
+    {
+      "paper_id": "openalex:W4406208171",
+      "title": "ESVT: Event-Based Streaming Vision Transformer for Challenging Object Detection",
+      "year": 2025,
+      "source": "openalex",
+      "doi": "10.1109/tgrs.2025.3527474",
+      "url": "https://doi.org/10.1109/tgrs.2025.3527474",
+      "pdf_url": null,
+      "content_level": "abstract_fallback",
+      "content_chars_used": 340,
+      "task_buckets": [
+        "Object Tracking / Multi-Object Tracking",
+        "Object Detection",
+        "Domain-Specific Scenario"
+      ],
+      "taxonomy": {
+        "input_representation": "Event Representation (Unspecified in available text)",
+        "model_paradigm": "Transformer Family",
+        "learning_supervision": "Supervision Not Explicitly Reported"
+      },
+      "merged_from_count": 1,
+      "merged_paper_ids": [
+        "openalex:W4406208171"
+      ],
+      "main_content": "Object detection is a crucial task in the field of remote sensing. Currently, frame-based algorithms have demonstrated impressive performance. However, research on remote sensing applying event cameras has not yet been conducted. Meanwhile, there are still ..."
+    },
+    {
+      "paper_id": "arxiv:2406.20024v3",
+      "title": "eMoE-Tracker: Environmental MoE-based Transformer for Robust Event-guided Object Tracking",
+      "year": 2024,
+      "source": "arxiv",
+      "doi": null,
+      "url": "http://arxiv.org/abs/2406.20024v3",
+      "pdf_url": "https://arxiv.org/pdf/2406.20024.pdf",
+      "content_level": "fulltext_pdf",
+      "content_chars_used": 47741,
+      "task_buckets": [
+        "Object Tracking / Multi-Object Tracking",
+        "Object Detection",
+        "Dataset / Benchmark"
+      ],
+      "taxonomy": {
+        "input_representation": "Raw Event Stream",
+        "model_paradigm": "Transformer Family (incl. MoE variants)",
+        "learning_supervision": "Label-Efficient / Semi-Supervised"
+      },
+      "merged_from_count": 1,
+      "merged_paper_ids": [
+        "arxiv:2406.20024v3"
+      ],
+      "main_content": "The unique complementarity of frame-based and event cameras for high frame rate object tracking has recently inspired some research attempts to develop multi-modal fusion approaches. However, these methods directly fuse both modalities and thus ignore the e..."
+    },
+    {
+      "paper_id": "arxiv:2403.18330v3",
+      "title": "Tracking-Assisted Object Detection with Event Cameras",
+      "year": 2024,
+      "source": "arxiv",
+      "doi": null,
+      "url": "http://arxiv.org/abs/2403.18330v3",
+      "pdf_url": "https://arxiv.org/pdf/2403.18330.pdf",
+      "content_level": "fulltext_pdf",
+      "content_chars_used": 58115,
+      "task_buckets": [
+        "Object Tracking / Multi-Object Tracking",
+        "Object Detection",
+        "Joint Detection + Tracking",
+        "Dataset / Benchmark",
+        "Domain-Specific Scenario",
+        "Hardware-Aware / Efficient Deployment"
+      ],
+      "taxonomy": {
+        "input_representation": "Event Frame / Voxel / Time-Surface",
+        "model_paradigm": "Transformer Family",
+        "learning_supervision": "Dataset / Benchmark-Driven Supervision"
+      },
+      "merged_from_count": 1,
+      "merged_paper_ids": [
+        "arxiv:2403.18330v3"
+      ],
+      "main_content": "Event-based object detection has recently garnered attention in the computer vision community due to the exceptional properties of event cameras, such as high dynamic range and no motion blur. However, feature asynchronism and sparsity cause invisible objec..."
+    },
+    {
+      "paper_id": "arxiv:2407.20446v1",
+      "title": "MEVDT: Multi-Modal Event-Based Vehicle Detection and Tracking Dataset",
+      "year": 2024,
+      "source": "arxiv",
+      "doi": null,
+      "url": "http://arxiv.org/abs/2407.20446v1",
+      "pdf_url": "https://arxiv.org/pdf/2407.20446.pdf",
+      "content_level": "fulltext_pdf",
+      "content_chars_used": 38149,
+      "task_buckets": [
+        "Object Tracking / Multi-Object Tracking",
+        "Object Detection",
+        "Joint Detection + Tracking",
+        "Dataset / Benchmark",
+        "Domain-Specific Scenario",
+        "Hardware-Aware / Efficient Deployment"
+      ],
+      "taxonomy": {
+        "input_representation": "Raw Event Stream",
+        "model_paradigm": "Transformer Family",
+        "learning_supervision": "Dataset / Benchmark-Driven Supervision"
+      },
+      "merged_from_count": 2,
+      "merged_paper_ids": [
+        "arxiv:2407.20446v1",
+        "s2:2407.20446"
+      ],
+      "main_content": "In this data article, we introduce the Multi-Modal Event-based Vehicle Detection and Tracking (MEVDT) dataset. This dataset provides a synchronized stream of event data and grayscale images of traffic scenes, captured using the Dynamic and Active-Pixel Visi..."
+    },
+    {
+      "paper_id": "openalex:W4402753639",
+      "title": "LEOD: Label-Efficient Object Detection for Event Cameras",
+      "year": 2024,
+      "source": "openalex",
+      "doi": "10.1109/cvpr52733.2024.01602",
+      "url": "https://doi.org/10.1109/cvpr52733.2024.01602",
+      "pdf_url": null,
+      "content_level": "abstract_fallback",
+      "content_chars_used": 317,
+      "task_buckets": [
+        "Object Detection"
+      ],
+      "taxonomy": {
+        "input_representation": "Raw Event Stream",
+        "model_paradigm": "Other / Unspecified",
+        "learning_supervision": "Label-Efficient / Semi-Supervised"
+      },
+      "merged_from_count": 1,
+      "merged_paper_ids": [
+        "openalex:W4402753639"
+      ],
+      "main_content": "Object detection with event cameras benefits from the sensor's low latency and high dynamic range. However, it is costly to fully label event streams for supervised training due to their high temporal resolution. To reduce this cost, we present LEOD, the fi..."
+    },
+    {
+      "paper_id": "openalex:W4393172807",
+      "title": "Direct 3D model-based object tracking with event camera by motion interpolation",
+      "year": 2024,
+      "source": "openalex",
+      "doi": "10.1109/icra57147.2024.10611576",
+      "url": "https://doi.org/10.1109/icra57147.2024.10611576",
+      "pdf_url": null,
+      "content_level": "abstract_fallback",
+      "content_chars_used": 340,
+      "task_buckets": [
+        "Object Tracking / Multi-Object Tracking"
+      ],
+      "taxonomy": {
+        "input_representation": "Geometric / 3D Representation",
+        "model_paradigm": "Classical Geometric / Model-Based",
+        "learning_supervision": "Supervision Not Explicitly Reported"
+      },
+      "merged_from_count": 1,
+      "merged_paper_ids": [
+        "openalex:W4393172807"
+      ],
+      "main_content": "Event cameras are recent sensors that measure intensity changes in each pixel asynchronously. It is being used due to lower latency and higher temporal resolution compared to traditional frame-based camera. We propose a method of 3D model-based object track..."
+    },
+    {
+      "paper_id": "arxiv:2401.02826v1",
+      "title": "CRSOT: Cross-Resolution Object Tracking using Unaligned Frame and Event Cameras",
+      "year": 2024,
+      "source": "arxiv",
+      "doi": null,
+      "url": "http://arxiv.org/abs/2401.02826v1",
+      "pdf_url": "https://arxiv.org/pdf/2401.02826.pdf",
+      "content_level": "fulltext_pdf",
+      "content_chars_used": 52010,
+      "task_buckets": [
+        "Object Tracking / Multi-Object Tracking",
+        "Object Detection",
+        "Joint Detection + Tracking",
+        "Dataset / Benchmark",
+        "Domain-Specific Scenario",
+        "Hardware-Aware / Efficient Deployment"
+      ],
+      "taxonomy": {
+        "input_representation": "Raw Event Stream",
+        "model_paradigm": "Transformer Family (incl. MoE variants)",
+        "learning_supervision": "Dataset / Benchmark-Driven Supervision"
+      },
+      "merged_from_count": 2,
+      "merged_paper_ids": [
+        "arxiv:2401.02826v1",
+        "openalex:W4413010666"
+      ],
+      "main_content": "Existing datasets for RGB-DVS tracking are collected with DVS346 camera and their resolution ($346 \\times 260$) is low for practical applications. Actually, only visible cameras are deployed in many practical systems, and the newly designed neuromorphic cam..."
+    },
+    {
+      "paper_id": "arxiv:2309.16987v1",
+      "title": "SpikeMOT: Event-based Multi-Object Tracking with Sparse Motion Features",
+      "year": 2023,
+      "source": "arxiv",
+      "doi": null,
+      "url": "http://arxiv.org/abs/2309.16987v1",
+      "pdf_url": "https://arxiv.org/pdf/2309.16987.pdf",
+      "content_level": "fulltext_pdf",
+      "content_chars_used": 79407,
+      "task_buckets": [
+        "Object Tracking / Multi-Object Tracking",
+        "Object Detection",
+        "Joint Detection + Tracking",
+        "Dataset / Benchmark",
+        "Domain-Specific Scenario",
+        "Hardware-Aware / Efficient Deployment"
+      ],
+      "taxonomy": {
+        "input_representation": "Raw Event Stream",
+        "model_paradigm": "Transformer Family",
+        "learning_supervision": "Dataset / Benchmark-Driven Supervision"
+      },
+      "merged_from_count": 1,
+      "merged_paper_ids": [
+        "arxiv:2309.16987v1"
+      ],
+      "main_content": "In comparison to conventional RGB cameras, the superior temporal resolution of event cameras allows them to capture rich information between frames, making them prime candidates for object tracking. Yet in practice, despite their theoretical advantages, the..."
+    },
+    {
+      "paper_id": "openalex:W4386075690",
+      "title": "Recurrent Vision Transformers for Object Detection with Event Cameras",
+      "year": 2023,
+      "source": "openalex",
+      "doi": "10.1109/cvpr52729.2023.01334",
+      "url": "https://doi.org/10.1109/cvpr52729.2023.01334",
+      "pdf_url": null,
+      "content_level": "abstract_fallback",
+      "content_chars_used": 330,
+      "task_buckets": [
+        "Object Tracking / Multi-Object Tracking",
+        "Object Detection"
+      ],
+      "taxonomy": {
+        "input_representation": "Event Representation (Unspecified in available text)",
+        "model_paradigm": "Transformer Family",
+        "learning_supervision": "Supervision Not Explicitly Reported"
+      },
+      "merged_from_count": 1,
+      "merged_paper_ids": [
+        "openalex:W4386075690"
+      ],
+      "main_content": "We present Recurrent Vision Transformers (RVTs), a novel backbone for object detection with event cameras. Event cameras provide visual information with submillisecond latency at a high-dynamic range and with strong robustness against motion blur. These uni..."
+    },
+    {
+      "paper_id": "openalex:W4360606223",
+      "title": "A 73.53TOPS/W 14.74TOPS Heterogeneous RRAM In-Memory and SRAM Near-Memory SoC for Hybrid Frame and Event-Based Target Tracking",
+      "year": 2023,
+      "source": "openalex",
+      "doi": "10.1109/isscc42615.2023.10067544",
+      "url": "https://doi.org/10.1109/isscc42615.2023.10067544",
+      "pdf_url": null,
+      "content_level": "abstract_fallback",
+      "content_chars_used": 387,
+      "task_buckets": [
+        "Domain-Specific Scenario",
+        "Hardware-Aware / Efficient Deployment"
+      ],
+      "taxonomy": {
+        "input_representation": "Hybrid Fusion (Frame + Event)",
+        "model_paradigm": "CNN / Hybrid Deep Network",
+        "learning_supervision": "Supervision Not Explicitly Reported"
+      },
+      "merged_from_count": 1,
+      "merged_paper_ids": [
+        "openalex:W4360606223"
+      ],
+      "main_content": "Vision-based high-speed target-identification and tracking is a critical application in unmanned aerial vehicles (UAV) with wide military and commercial usage. Traditional frame cameras processed through convolutional neural networks (CNN) exhibit high targ..."
+    }
+  ]
+}

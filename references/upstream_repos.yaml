@@ -1,0 +1,53 @@
+# Primary upstream references for this codebase.
+# Each item tracks what we borrow and where we add original contributions.
+repos:
+  - name: future-house/paper-qa
+    url: https://github.com/future-house/paper-qa
+    purpose: "Scientific grounded-answer baseline and metadata-aware retrieval ideas"
+    borrow:
+      - "Evidence-first answer pattern"
+      - "Metadata-enriched search concepts"
+    extend:
+      - "LangGraph multi-agent orchestration"
+      - "EventVision-specific query expansion and citation-hop"
+
+  - name: assafelovic/gpt-researcher
+    url: https://github.com/assafelovic/gpt-researcher
+    purpose: "Sub-question planning and parallel retrieval UX"
+    borrow:
+      - "Planner decomposition style"
+      - "Report-like answer structure"
+    extend:
+      - "Academic API connectors instead of general web search"
+
+  - name: stanford-oval/storm
+    url: https://github.com/stanford-oval/storm
+    purpose: "Long-form research synthesis with citations"
+    borrow:
+      - "Multi-perspective evidence aggregation"
+    extend:
+      - "Claim-evidence table with critic loop"
+
+  - name: qdrant/qdrant
+    url: https://github.com/qdrant/qdrant
+    purpose: "Vector index backend with metadata filtering"
+    borrow:
+      - "Vector retrieval backend pattern"
+
+  - name: grobidOrg/grobid
+    url: https://github.com/grobidOrg/grobid
+    purpose: "Scientific PDF structural parsing"
+    borrow:
+      - "TEI-based section/reference extraction"
+
+  - name: truera/trulens
+    url: https://github.com/truera/trulens
+    purpose: "Evaluation/tracing references for trustworthiness"
+    borrow:
+      - "RAG evaluation dimensions"
+
+  - name: confident-ai/deepeval
+    url: https://github.com/confident-ai/deepeval
+    purpose: "CI-friendly LLM quality evaluation patterns"
+    borrow:
+      - "Test-like benchmark organization"
