@@ -2,8 +2,8 @@ from __future__ import annotations
 
 from math import ceil
 
-from evagent.domain import RetrievalProfile, get_profile
 from evagent.config import Settings
+from evagent.domain import RetrievalProfile, get_profile
 from evagent.models import PaperRecord
 from evagent.retrieval import profile_filter_and_rank
 from evagent.sources.arxiv import ArxivSource

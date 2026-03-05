@@ -22,6 +22,7 @@ class ArxivSource:
             title = (entry.findtext("atom:title", default="", namespaces=ns) or "").strip().replace("\n", " ")
             abstract = (entry.findtext("atom:summary", default="", namespaces=ns) or "").strip().replace("\n", " ")
             published = entry.findtext("atom:published", default="", namespaces=ns)
+            updated = entry.findtext("atom:updated", default="", namespaces=ns)
             year = int(published[:4]) if len(published) >= 4 and published[:4].isdigit() else None
             authors = [a.findtext("atom:name", default="", namespaces=ns) for a in entry.findall("atom:author", ns)]
 
@@ -41,6 +42,10 @@ class ArxivSource:
                     abstract=abstract,
                     url=entry_id,
                     pdf_url=pdf_url,
+                    metadata={
+                        "published_at": published or None,
+                        "updated_at": updated or None,
+                    },
                 )
             )
 

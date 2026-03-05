@@ -16,6 +16,7 @@ from evagent.ingest.pipeline import ingest_pdf
 from evagent.llm.client import LLMClient
 from evagent.observability.tracing import configure_logging, get_logger
 from evagent.sources import MultiSourceRetriever
+from evagent.sub_agents.space_observation_digest import SpaceObservationDigestAgent
 
 app = typer.Typer(help="EventVision literature multi-agent CLI")
 console = Console()
@@ -253,6 +254,73 @@ def cache_links(markdown: str = typer.Argument("AI agent项目步骤.md")) -> No
         raise typer.BadParameter("scripts/cache_links.sh not found")
     subprocess.run(["bash", str(script), markdown], check=True)
     console.print("Wrote references/source_urls.txt and references/source_urls.jsonl")
+
+
+@app.command("space-observation-push")
+def space_observation_push(
+    schedule: bool = typer.Option(False, "--schedule", help="Run continuously and trigger once per day."),
+    at: str = typer.Option("09:00", help="Daily trigger time in HH:MM."),
+    timezone_name: str | None = typer.Option(None, "--tz", help="IANA timezone, e.g. Europe/Berlin."),
+    max_items: int = typer.Option(5, min=1, max=20),
+    per_source_limit: int = typer.Option(6, min=1, max=40),
+    notify: bool = typer.Option(True, "--notify/--no-notify"),
+) -> None:
+    """Push latest event-camera papers in space observation domain."""
+    settings = get_settings()
+    configure_logging(settings.log_level)
+    agent = SpaceObservationDigestAgent(settings=settings)
+
+    if schedule:
+        console.print(
+            {
+                "status": "scheduler_started",
+                "daily_at": at,
+                "timezone": timezone_name or "local",
+                "max_items": max_items,
+                "per_source_limit": per_source_limit,
+            }
+        )
+        try:
+            agent.run_daily(
+                at=at,
+                timezone_name=timezone_name,
+                max_items=max_items,
+                per_source_limit=per_source_limit,
+                notify=notify,
+            )
+        except KeyboardInterrupt:
+            console.print("Scheduler stopped.")
+        return
+
+    report = agent.run_once(
+        max_items=max_items,
+        per_source_limit=per_source_limit,
+        notify=notify,
+    )
+
+    table = Table(title=f"Space Observation Digest ({report.run_date.isoformat()})")
+    table.add_column("title")
+    table.add_column("main_content")
+    table.add_column("source")
+    table.add_column("published")
+    for item in report.items:
+        table.add_row(
+            item.title[:72],
+            _short(item.main_content, 200),
+            item.source,
+            item.published_at or str(item.year or ""),
+        )
+    console.print(table)
+
+    console.print(
+        {
+            "count": len(report.items),
+            "fallback_to_seen": report.used_fallback,
+            "notified": report.notified,
+            "markdown": str(report.output_markdown_path) if report.output_markdown_path else None,
+            "json": str(report.output_json_path) if report.output_json_path else None,
+        }
+    )
 
 
 def main() -> None:

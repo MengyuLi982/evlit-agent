@@ -22,9 +22,16 @@ class CrossrefSource:
             title = (item.get("title") or [""])[0]
             year = None
             parts = (item.get("published-print") or item.get("published-online") or {}).get("date-parts")
+            published_at = None
             if isinstance(parts, list) and parts and isinstance(parts[0], list) and parts[0]:
                 maybe_year = parts[0][0]
                 year = int(maybe_year) if isinstance(maybe_year, int) else None
+                if year is not None:
+                    month = parts[0][1] if len(parts[0]) > 1 and isinstance(parts[0][1], int) else 1
+                    day = parts[0][2] if len(parts[0]) > 2 and isinstance(parts[0][2], int) else 1
+                    month = min(12, max(1, month))
+                    day = min(31, max(1, day))
+                    published_at = f"{year:04d}-{month:02d}-{day:02d}"
 
             authors = []
             for a in item.get("author", []) or []:
@@ -42,7 +49,11 @@ class CrossrefSource:
                     abstract=item.get("abstract"),
                     url=item.get("URL"),
                     doi=doi,
-                    metadata={"publisher": item.get("publisher"), "type": item.get("type")},
+                    metadata={
+                        "publisher": item.get("publisher"),
+                        "type": item.get("type"),
+                        "published_at": published_at,
+                    },
                 )
             )
 

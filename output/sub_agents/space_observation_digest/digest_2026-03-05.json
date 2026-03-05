@@ -1,0 +1,111 @@
+{
+  "run_date": "2026-03-05",
+  "generated_at": "2026-03-05T16:03:58.901252+01:00",
+  "profile_name": "sps_space_event_startracking",
+  "queries": [
+    "event camera space observation",
+    "event-based vision star tracking satellite observation",
+    "neuromorphic event camera space situational awareness"
+  ],
+  "total_candidates": 6,
+  "used_fallback": false,
+  "items": [
+    {
+      "paper_id": "arxiv:2506.07860v1",
+      "title": "Egocentric Event-Based Vision for Ping Pong Ball Trajectory Prediction",
+      "source": "arxiv",
+      "year": 2025,
+      "published_at": "2025-06-09",
+      "url": "http://arxiv.org/abs/2506.07860v1",
+      "main_content": "In this paper, we present a real-time egocentric trajectory prediction system for table tennis using event cameras. Unlike standard cameras, which suffer from high latency and motion blur at fast ball speeds, event cameras provide higher temporal resolution, allowing more frequent state updates, ...",
+      "relevance_score": 0.6333
+    },
+    {
+      "paper_id": "arxiv:2501.01040v1",
+      "title": "Event Masked Autoencoder: Point-wise Action Recognition with Event-Based Cameras",
+      "source": "arxiv",
+      "year": 2025,
+      "published_at": "2025-01-02",
+      "url": "http://arxiv.org/abs/2501.01040v1",
+      "main_content": "Dynamic vision sensors (DVS) are bio-inspired devices that capture visual information in the form of asynchronous events, which encode changes in pixel intensity with high temporal resolution and low latency. These events provide rich motion cues that can be exploited for various computer vision ...",
+      "relevance_score": 0.6333
+    },
+    {
+      "paper_id": "arxiv:2402.15584v3",
+      "title": "State Space Models for Event Cameras",
+      "source": "arxiv",
+      "year": 2024,
+      "published_at": "2024-02-23",
+      "url": "http://arxiv.org/abs/2402.15584v3",
+      "main_content": "Today, state-of-the-art deep neural networks that process event-camera data first convert a temporal window of events into dense, grid-like input representations. As such, they exhibit poor generalizability when deployed at higher inference frequencies (i.e., smaller temporal windows) than the on...",
+      "relevance_score": 0.6333
+    },
+    {
+      "paper_id": "openalex:W4405306228",
+      "title": "Emerging Trends and Applications of Neuromorphic Dynamic Vision Sensors: A Survey",
+      "source": "openalex",
+      "year": 2024,
+      "published_at": "2024-01-01",
+      "url": "https://doi.org/10.1109/sr.2024.3513952",
+      "main_content": "Traditional frame-based cameras, foundational in computer vision, face challenges, such as motion blur, restricted dynamic range, and limited temporal resolution, which limit their use in various scenarios. Neuromorphic dynamic vision sensors (DVSs), inspired by biological vision systems, offer a...",
+      "relevance_score": 0.7
+    },
+    {
+      "paper_id": "openalex:W4229060330",
+      "title": "Real-Time Event-Based Unsupervised Feature Consolidation and Tracking for Space Situational Awareness",
+      "source": "openalex",
+      "year": 2022,
+      "published_at": "2022-05-06",
+      "url": "https://doi.org/10.3389/fnins.2022.821157",
+      "main_content": "Earth orbit is a limited natural resource that hosts a vast range of vital space-based systems that support the international community's national, commercial and defence interests. This resource is rapidly becoming depleted with over-crowding in high demand orbital slots and a growing presence o...",
+      "relevance_score": 0.7
+    }
+  ],
+  "query_trace": [
+    {
+      "query": "event camera space observation",
+      "results": 2,
+      "source_errors": {
+        "semanticscholar": "RetryError[<Future at 0x746a85c5afd0 state=finished raised HTTPError>]"
+      },
+      "filter_stats": {
+        "raw_count": 21,
+        "after_component_filter": 18,
+        "after_year_filter": 7,
+        "after_score_filter": 2,
+        "after_dedup": 2
+      }
+    },
+    {
+      "query": "event-based vision star tracking satellite observation",
+      "results": 1,
+      "source_errors": {
+        "semanticscholar": "RetryError[<Future at 0x746a85c82120 state=finished raised HTTPError>]"
+      },
+      "filter_stats": {
+        "raw_count": 21,
+        "after_component_filter": 20,
+        "after_year_filter": 10,
+        "after_score_filter": 1,
+        "after_dedup": 1
+      }
+    },
+    {
+      "query": "neuromorphic event camera space situational awareness",
+      "results": 3,
+      "source_errors": {
+        "semanticscholar": "RetryError[<Future at 0x746a85d6bb90 state=finished raised HTTPError>]"
+      },
+      "filter_stats": {
+        "raw_count": 21,
+        "after_component_filter": 21,
+        "after_year_filter": 18,
+        "after_score_filter": 3,
+        "after_dedup": 3
+      }
+    }
+  ],
+  "output_markdown_path": null,
+  "output_json_path": null,
+  "notified": false
+}

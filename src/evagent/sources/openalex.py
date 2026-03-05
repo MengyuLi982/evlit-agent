@@ -46,6 +46,7 @@ class OpenAlexSource:
                     metadata={
                         "referenced_works": w.get("referenced_works", []),
                         "cited_by_count": w.get("cited_by_count"),
+                        "publication_date": w.get("publication_date"),
                     },
                 )
             )

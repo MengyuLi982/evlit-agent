@@ -1,37 +1,22 @@
-# EventVision Literature Agent
+# EVLIT-Agent (EventVision Literature Agent)
 
-A practical starter codebase to build an **agentic RAG system** for event-camera / AI-imaging literature.
+EVLIT-Agent is a practical multi-agent literature assistant for event-camera and space-observation research.
 
-## Upstream-first Strategy
+Current core abilities:
+- multi-source paper search and ranking (`arXiv`, `OpenAlex`, `Semantic Scholar`, `Crossref`)
+- grounded Q&A workflow with a LangGraph-style agent pipeline
+- PDF ingest through GROBID
+- daily sub-agent push for new space-observation papers (title + main content)
 
-The project tracks upstream references in `references/upstream_repos.yaml` (use/reference only).
-Actual code-import targets are tracked separately in `references/imported_repos.yaml`.
-Implementation mapping is documented in `references/borrowed_components.md`.
+## Current Architecture
 
-Current primary references:
-- PaperQA2: scientific grounded-answer baseline
-- GPT-Researcher: sub-question decomposition workflow
-- STORM: citation-aware synthesis style
-- LangGraph: explicit multi-agent graph orchestration
-- Qdrant + GROBID: vector index and scientific PDF parsing foundation
+Main retrieval-answer flow:
+- `Planner -> Retriever -> Evidence -> Critic -> Draft`
 
-## What Is Implemented (Baseline)
+Specialized automation:
+- `sub_agents/space_observation_digest` for scheduled daily paper digest and desktop notification
 
-- CLI entrypoints:
-  - `evagent search "<query>"`
-  - `evagent ask "<query>"`
-  - `evagent ingest --pdf <path-or-url>`
-  - `evagent profiles`
-- Multi-source academic search connectors:
-  - arXiv, Semantic Scholar, OpenAlex, Crossref
-- Dedup strategy:
-  - `DOI > arXiv_id > normalized(title + first_author + year)`
-- Multi-agent graph (LangGraph):
-  - `Planner -> Retriever -> Evidence -> Critic -> Draft`
-- Provenance cache for Markdown links with retrieval timestamp
-- Starter eval metrics (`recall_at_k`, `mrr_at_k`, `ndcg_at_k`)
-
-## Quickstart
+## Installation
 
 ```bash
 python -m venv .venv
@@ -40,42 +25,66 @@ pip install -e ".[dev]"
 cp .env.example .env
 ```
 
-Optional services:
+Optional local services:
 
 ```bash
 docker compose up -d qdrant grobid
 ```
 
-Run commands:
+## Configuration
+
+Environment variables are in `.env.example`.
+
+Common fields:
+- `EVAGENT_API_KEY`, `EVAGENT_API_BASE`, `EVAGENT_CHAT_MODEL`, `EVAGENT_EMBED_MODEL`
+- `S2_API_KEY`, `OPENALEX_API_KEY`, `CROSSREF_MAILTO`
+- `QDRANT_URL`, `GROBID_URL`
+- `EVAGENT_RUNS_DIR`, `EVAGENT_CACHE_DIR`, `EVAGENT_LOG_LEVEL`
+
+## CLI Commands
+
+After `pip install -e ".[dev]"`, use `evagent ...`.
+If entrypoint is not available, use `PYTHONPATH=src python -m evagent.app ...`.
 
 ```bash
+# list retrieval profiles
 evagent profiles
-evagent search "event camera star tracking" --profile sps_space_event_startracking --year-from 2021 --min-score 0.55 --limit 5
-evagent ask "What datasets are used for event-camera star tracking?" --profile sps_space_event_startracking --year-from 2021 --min-score 0.55 --min-evidence 3 --limit 6
+
+# search papers
+evagent search "event camera star tracking" \
+  --profile sps_space_event_startracking \
+  --year-from 2021 --min-score 0.55 --limit 5
+
+# ask a grounded question
+evagent ask "What datasets are used for event-camera star tracking?" \
+  --profile sps_space_event_startracking \
+  --year-from 2021 --min-score 0.55 --min-evidence 3 --limit 6
+
+# ingest a local or remote PDF
 evagent ingest --pdf "https://arxiv.org/pdf/2505.12588.pdf"
+
+# run digest push once now
+evagent space-observation-push --max-items 5 --notify
+
+# run digest scheduler every day at 09:00 (local timezone)
+evagent space-observation-push --schedule --at 09:00 --notify
+
+# run with explicit timezone
+evagent space-observation-push --schedule --at 09:00 --tz Asia/Shanghai --notify
 ```
 
-## Provenance Workflow
+Note:
+- `cache-links` command in CLI expects `scripts/cache_links.sh`.
+- If that script is removed in your local branch, `cache-links` will not run.
 
-Extract URLs and cache retrieval timestamp:
+## Daily Digest Output
 
-```bash
-bash scripts/cache_links.sh "AI agent项目步骤.md"
-```
-
-Output:
-- `references/source_urls.txt`
-- `references/source_urls.jsonl`
-
-## Borrowed-vs-Original Boundary
-
-Borrowed (upstream-inspired):
-- search/retrieval APIs, citation-aware synthesis patterns, graph orchestration style
-
-Original (to implement next):
-- event-domain query expansion (`event camera`, `DVS`, `DAVIS`, `jitter`, `centroiding`)
-- citation-hop retrieval (`referenced_works`, `cited_by`) with diversity constraints
-- contextual-bandit retrieval policy selection loop
+Space-observation sub-agent outputs:
+- `output/sub_agents/space_observation_digest/digest_YYYY-MM-DD.md`
+- `output/sub_agents/space_observation_digest/digest_YYYY-MM-DD.json`
+- `output/sub_agents/space_observation_digest/latest.md`
+- `output/sub_agents/space_observation_digest/state.json`
+- run logs in `runs/space_observation_digest_runs.jsonl`
 
 ## Project Layout
 
@@ -83,58 +92,65 @@ Original (to implement next):
 src/evagent/
   app.py
   config.py
+  models.py
   agents/
+    graph.py
+    nodes.py
+    state.py
   analysis/
-  sources/
-  ingest/
-  index/
+  domain/
   eval/
+  index/
+  ingest/
+  llm/
   observability/
+  retrieval/
+  sources/
+  sub_agents/
+    space_observation_digest/
+      agent.py
+      README.md
 ```
 
-## Reference Bootstrap
+Other key directories:
+- `tests/` unit tests including digest-agent tests
+- `scripts/` repo utility scripts (upstream import, diagram/pdf helpers)
+- `output/` generated reports/diagrams/pdfs/sub-agent outputs
+- `references/` upstream mapping and source URL tracking files
 
-To clone selected upstream repositories locally for inspection:
+## Development
+
+```bash
+ruff check src tests
+PYTHONPATH=src pytest -q
+```
+
+## Upstream References and Import
+
+Reference tracking files:
+- `references/upstream_repos.yaml`
+- `references/imported_repos.yaml`
+- `references/borrowed_components.md`
+
+Clone reference repos:
 
 ```bash
 bash scripts/bootstrap_refs.sh
 ```
 
-Clones are placed in `.cache/upstream/`.
-
-## Import Upstream Repos With Original Commit Dates
-
-If you want imported code to keep upstream commit history and timestamps on GitHub, use subtree import (not copy/paste, squash, or cherry-pick).
-
-Single repository import:
+Import upstream history via subtree:
 
 ```bash
+# add
 bash scripts/import_upstream_history.sh add \
   --repo-url https://github.com/future-house/paper-qa.git \
   --prefix vendor/paper-qa
-```
 
-Update an existing imported subtree:
-
-```bash
+# update
 bash scripts/import_upstream_history.sh pull \
   --repo-url https://github.com/future-house/paper-qa.git \
   --prefix vendor/paper-qa
-```
 
-Batch import from `references/imported_repos.yaml`:
-
-```bash
+# batch add from references/imported_repos.yaml
 bash scripts/import_upstreams_from_yaml.sh --mode add
 ```
-
-Dry-run batch mode:
-
-```bash
-bash scripts/import_upstreams_from_yaml.sh --mode add --dry-run
-```
-
-Notes:
-- Keep your working tree clean before running imports.
-- Upstream commits preserve original timestamps; each import/update adds one new local merge commit with current time.
-- Keep "use/reference only" repos in `references/upstream_repos.yaml`; only put real code-import repos in `references/imported_repos.yaml`.
