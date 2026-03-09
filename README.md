@@ -1,6 +1,6 @@
 # EVLIT-Agent (EventVision Literature Agent)
 
-EVLIT-Agent is a practical multi-agent literature assistant for event-camera and space-observation research.
+EVLIT-Agent is a practical multi-agent literature assistant for event-camera research.
 
 Current core abilities:
 - multi-source paper search and ranking (`arXiv`, `OpenAlex`, `Semantic Scholar`, `Crossref`)
@@ -86,7 +86,7 @@ Space-observation sub-agent outputs:
 - `output/sub_agents/space_observation_digest/state.json`
 - run logs in `runs/space_observation_digest_runs.jsonl`
 
-## Project Layout
+<!-- ## Project Layout
 
 ```text
 src/evagent/
@@ -123,7 +123,7 @@ Other key directories:
 ```bash
 ruff check src tests
 PYTHONPATH=src pytest -q
-```
+``` -->
 
 ## Upstream References and Import
 
